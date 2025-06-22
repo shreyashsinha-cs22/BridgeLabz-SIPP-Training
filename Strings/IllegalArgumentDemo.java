@@ -12,7 +12,6 @@ public class IllegalArgumentDemo {
     // Method that handles the exception using try-catch block
     public static void handleException(String input) {
         try {
-            // Again, deliberately causing IllegalArgumentException
             String result = input.substring(5, 2);
             System.out.println("Substring: " + result);
         } catch (IllegalArgumentException e) {
@@ -34,7 +33,6 @@ public class IllegalArgumentDemo {
             System.out.println("Exception in generateException: " + e.getMessage());
         }
 
-        // This method handles the exception properly
         handleException(userInput);
     }
 }

@@ -16,7 +16,7 @@ public class VowelConsonantChecker {
     }
     
     public static String[][] analyzeString(String text) {
-        int len = text.length(); // .length() is okay here for loop bounds
+        int len = text.length(); 
         String[][] result = new String[len][2];
 
         for (int i = 0; i < len; i++) {

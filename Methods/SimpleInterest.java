@@ -26,6 +26,5 @@ class SimpleInterest {
         // Display the result
         System.out.println("The Simple Interest is " + simpleInterest + " for Principal " + principal + ", Rate of Interest " + rate + " and Time " + time);
 
-        sc.close();
     }
 }

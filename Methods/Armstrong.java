@@ -1,7 +1,5 @@
 import java.util.Scanner;
-
 public class Armstrong {
-
     // Count number of digits
     static int countDigits(int number) {
         int count = 0;
@@ -12,7 +10,6 @@ public class Armstrong {
         }
         return count;
     }
-
     // Store the digits in an array
     static int[] storeDigits(int number) {
         int count = countDigits(number);
@@ -24,7 +21,6 @@ public class Armstrong {
         }
         return digitArray;
     }
-
     // Check if number is a duck number
     static boolean isDuckNumber(int number) {
         int[] digitArray = storeDigits(number);
@@ -61,10 +57,8 @@ public class Armstrong {
                 secondLargest = number;
             }
         }
-
         return new int[]{largest, secondLargest}; // [largest, 2nd largest]
     }
-
     // Find smallest and 2nd smallest
     static int[] findSmallest(int[] arr) {
         int smallest = Integer.MAX_VALUE;
@@ -78,10 +72,8 @@ public class Armstrong {
                 secondSmallest = number;
             }
         }
-
         return new int[]{smallest, secondSmallest}; // [smallest, 2nd smallest]
     }
-
     // Main method
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -97,16 +89,12 @@ public class Armstrong {
             System.out.print(d + " ");
         }
         System.out.println();
-
         boolean isDuck = isDuckNumber(number);
         System.out.println("Is a duck number? " + isDuck);
-
         boolean isArmstrong = isArmstrong(number);
         System.out.println("Is Armstrong Number? " + isArmstrong);
-
         int[] largest = findLargest(digitArray);
         System.out.println("Largest: " + largest[0] + ", Second largest: " + largest[1]);
-
         int[] smallest = findSmallest(digitArray);
         System.out.println("Smallest: " + smallest[0] + ", Second Smallest: " + smallest[1]);
     }

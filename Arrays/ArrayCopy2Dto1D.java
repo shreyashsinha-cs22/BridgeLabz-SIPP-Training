@@ -2,33 +2,33 @@ import java.util.Scanner;
 
 public class ArrayCopy2Dto1D {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        // Step 1: Take input for rows and columns
+        // Take input for rows and columns
         System.out.print("Enter number of rows: ");
-        int rows = scanner.nextInt();
+        int rows = sc.nextInt();
 
         System.out.print("Enter number of columns: ");
-        int columns = scanner.nextInt();
+        int columns = sc.nextInt();
 
-        int[][] matrix = new int[rows][columns]; // 2D array creation
+        int[][] matrix = new int[rows][columns]; 
 
-        // Step 1: Input elements of the 2D array
+        // Input elements of the 2D array
         System.out.println("Enter elements of the matrix:");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 System.out.print("Element [" + i + "][" + j + "]: ");
-                matrix[i][j] = scanner.nextInt();
+                matrix[i][j] = sc.nextInt();
             }
         }
 
-        // Step 2: Create 1D array of size rows * columns
+        // Create 1D array of size rows * columns
         int[] array = new int[rows * columns];
 
-        // Step 3: Copy elements from 2D to 1D
+        // Copy elements from 2D to 1D
         int index = 0;
-        for (int i = 0; i < rows; i++) {         // Outer loop for rows
-            for (int j = 0; j < columns; j++) {  // Inner loop for columns
+        for (int i = 0; i < rows; i++) {         
+            for (int j = 0; j < columns; j++) {
                 array[index] = matrix[i][j];
                 index++;
             }
@@ -49,6 +49,5 @@ public class ArrayCopy2Dto1D {
             System.out.print(array[i] + " ");
         }
 
-        scanner.close();
     }
 }

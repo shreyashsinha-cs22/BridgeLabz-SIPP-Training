@@ -22,7 +22,6 @@ public class BMI {
             heights[i] = sc.nextDouble();
         }
 
-        // Calculate BMI and determine weight status
         for (int i = 0; i < numPersons; i++) {
             bmis[i] = weights[i] / (heights[i] * heights[i]);
             if (bmis[i] < 18.5) {
@@ -45,6 +44,6 @@ public class BMI {
             System.out.println("BMI: " + bmis[i]);
             System.out.println("Weight Status: " + statuses[i]);
         }
-        sc.close();
+		
     }
 }

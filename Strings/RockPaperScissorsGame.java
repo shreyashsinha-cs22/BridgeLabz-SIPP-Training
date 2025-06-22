@@ -7,7 +7,7 @@ public class RockPaperScissorsGame {
         else return "scissors";
     }
 
-    // 2. Determine winner
+    
     public static String getWinner(String user, String computer) {
         if (user.equals(computer)) return "Draw";
         if ((user.equals("rock") && computer.equals("scissors")) ||
@@ -43,7 +43,6 @@ public class RockPaperScissorsGame {
             results[i][3] = winner;
         }
 
-        // Calculate and add summary
         results[rounds + 1][0] = "TOTAL";
         results[rounds + 1][1] = "Wins: " + userWins + " (" + ((userWins * 100) / rounds) + "%)";
         results[rounds + 1][2] = "Wins: " + computerWins + " (" + ((computerWins * 100) / rounds) + "%)";
@@ -67,7 +66,7 @@ public class RockPaperScissorsGame {
         System.out.print("Enter number of games to play: ");
         int games = scanner.nextInt();
         String[][] results = playGame(games, scanner);
-        System.out.println("\n--- Game Results ---");
+        System.out.println("\n--- Game Results ---"); 
         displayResults(results);
     }
 }

@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class ManualStringSplitter {
-
-    // 1. Method to calculate string length without using .length()
     public static int getLength(String str) {
         char[] arr = str.toCharArray();
         int count = 0;
@@ -12,7 +10,6 @@ public class ManualStringSplitter {
         return count;
     }
 
-    // 2. Method to count number of words (separated by single spaces)
     public static int countWords(String text) {
         int count = 0;
         boolean inWord = false;
@@ -30,7 +27,6 @@ public class ManualStringSplitter {
         return count;
     }
 
-    // 3. Method to split the string into words using charAt()
     public static String[] manualSplit(String text) {
         int len = getLength(text);
         int wordCount = countWords(text);
@@ -59,7 +55,6 @@ public class ManualStringSplitter {
         return words;
     }
 
-    // 4. Method to compare two string arrays
     public static boolean compareArrays(String[] a, String[] b) {
         if (a.length != b.length) return false;
 
@@ -72,20 +67,13 @@ public class ManualStringSplitter {
         return true;
     }
 
-    // 5. Main method
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter a sentence: ");
         String input = scanner.nextLine();
-
-        // Built-in split()
         String[] builtIn = input.trim().split("\\s+");
-
-        // Manual split
         String[] manual = manualSplit(input);
-
-        // Compare and display
         System.out.println("\nBuilt-in Split:");
         for (String word : builtIn) {
             System.out.println("- " + word);
