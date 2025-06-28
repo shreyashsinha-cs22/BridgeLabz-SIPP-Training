@@ -4,7 +4,6 @@ public class CarRental {
     private String carModel;
     private int rentalDays;
     private double ratePerDay;
-
     // Default constructor
     public CarRental() {
         this.customerName = "Unknown";
@@ -12,7 +11,6 @@ public class CarRental {
         this.rentalDays = 1;
         this.ratePerDay = 1000.0; // Default rate
     }
-
     // Parameterized constructor
     public CarRental(String customerName, String carModel, int rentalDays) {
         this.customerName = customerName;
@@ -20,7 +18,6 @@ public class CarRental {
         this.rentalDays = rentalDays;
         this.ratePerDay = determineRate(carModel);
     }
-
     // Determine rate based on car model
     private double determineRate(String model) {
         switch (model.toLowerCase()) {
@@ -34,12 +31,10 @@ public class CarRental {
                 return 1000.0; // Standard rate
         }
     }
-
     // Method to calculate total cost
     public double calculateTotalCost() {
         return ratePerDay * rentalDays;
     }
-
     // Display rental details
     public void displayRentalInfo() {
         System.out.println("\nRental Details:");
@@ -49,27 +44,15 @@ public class CarRental {
         System.out.println("Rate per Day  : ₹" + ratePerDay);
         System.out.println("Total Cost    : ₹" + calculateTotalCost());
     }
-
-    // Main method
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Taking user input
         System.out.print("Enter customer name: ");
         String name = scanner.nextLine();
-
         System.out.print("Enter car model (Sedan/SUV/Luxury): ");
         String model = scanner.nextLine();
-
         System.out.print("Enter number of rental days: ");
         int days = scanner.nextInt();
-
-        // Create rental using parameterized constructor
         CarRental rental = new CarRental(name, model, days);
-
-        // Display details
         rental.displayRentalInfo();
-
-        scanner.close();
     }
 }
